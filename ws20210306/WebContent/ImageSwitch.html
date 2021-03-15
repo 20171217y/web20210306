@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Image Switch</title>
+</head>
+<body>
+<img src="imgs/p1.jpg" id="pic1"
+	width="600" height="440"/>
+	<button onclick="next()">Next</button>
+	<button onclick="prev()">Previous</button>
+<script>
+var imgs=["imgs/p1.jpg","imgs/p2.jpg","imgs/p3.jpg"];
+var count=0;
+
+/*function next(){
+	
+	var pic=document.getElementById("pic1");
+	count++;
+	if(count>=imgs.length) count=0;
+	pic.src=imgs[count];
+	
+}
+
+function prev(){
+	
+	var pic=document.getElementById("pic1");
+	count--;
+	if(count<0) count=imgs.length-1;
+	pic.src=imgs[count];
+	
+}單張播放*/
+
+function change(){
+	
+	var p=document.getElementById("pic1");
+	count++;
+	if(count>=imgs.length)
+		count=0;
+	p.src=imgs[count];
+	
+}
+window.setInterval(change,600);
+
+</script>
+</body>
+</html>

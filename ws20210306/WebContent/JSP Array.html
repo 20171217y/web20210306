@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+Image Path:<input type = "text" id="path" value="imgs/p1.jpg"/>
+<br>
+<button onclick ="add()">Add</button>
+<button onclick ="show()">show</button>
+<script>
+  imgs =[]
+  function add(){
+	  var txt=document.getElementById("path");
+	  imgs.puch(txt.value);
+	  alert("新增:" + txt.value);
+  }
+  function show(){
+	  var s="";
+	  for(var i=0;i<imgs.length;i++)
+		  s+=imgs[i]+"\n";
+	  alert(s);
+  }
+</script>
+
+</body>
+</html>
